@@ -1,0 +1,396 @@
+body {
+    background-color: #0A090A;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    /* картинка бэкграунда боди */
+    background-image: url(../img/main-bg.png);
+    background-repeat: no-repeat;
+    /* чтобы картинка при уменьшении экрана оставалась в центре */
+    background-position: top center;
+}
+
+.container {
+    
+    max-width: 1140px;
+    /* выравнивание по центру */
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    /* выравниваю по центру по вертикали */
+    align-items: center;
+    justify-content: space-between;
+    /* внутренний отступ сверху */
+    padding-top: 40px;
+    margin-bottom: 30%;
+    
+}
+
+.logo {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #FFFFFF;
+
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    flex: 0.8;
+}
+
+.search-input {
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 5px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 18px;
+    padding-right: 18px;
+    border: none;
+    color: #AEAEAE;
+    flex: 1;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+/* цвет плейс холдера */
+::-webkit-input-placeholder {color:#AEAEAE;}
+::-moz-placeholder          {color:#AEAEAE}/* Firefox 19+ */
+:-moz-placeholder           {color:#AEAEAE;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#AEAEAE;}
+
+.search-button {
+    /* прозрачный цвет бэкграунда */
+    background-color: transparent;
+    /* убираем границы */
+    border: none;
+    padding: 10px 18px;
+    
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* не растягивает изображение  */
+    object-fit: cover;
+    transform: rotate(90deg);
+}
+
+.title {
+    margin: 0;
+    margin-bottom: 7px;
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    line-height: 64px;
+    color: #FFFFFF;
+}
+
+.title-en {
+    /* Так как он строчный элемегт,чтобы его отводвинуть сделали инлайнблок */
+    display: inline-block;
+    font-size: 20px;
+    line-height: 23px;
+    color: #787878;
+    margin-bottom: 38px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.movie-info {
+    display: flex;
+    align-items: center;
+}
+.tag {
+    /* Чтобы отступы срабатывали */
+    display: inline-block;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+    background: #FFFFFF;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-right: 20px
+}
+
+.country {
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin-right: 33px;
+}
+
+.play {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    /* Чтобы ссылка не подчёркивалась */
+    text-decoration: none;
+}
+
+/* псевдоэлемент для обозначения иконки плей */
+.play:before {
+    /* пустой контент обязательное свойство для псевдоэлемента */
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/play.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-right: 15px;
+}
+
+.more {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    /* Чтобы ссылка не подчёркивалась */
+    text-decoration: none;
+}
+
+/* псевдоэлемент для обозначения кнопки подробнее */
+.more:after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/play.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-left: 15px;
+    transform: rotate(90deg);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    background: #FFFFFF;
+    border-radius: 3px;
+    color: black;
+    /* Исправленны в проценты из-за адаптивной вёрстки */
+    padding: 3% 4%;
+}
+
+.short-info {
+    margin-right: 3%;
+}
+
+/* чтобы кнопка была не справа а снизу */
+.poster {
+    display: block;
+    /* фишка с отрицательным отступом чтобы подвинуть вверх */
+    margin-top: -40%;
+    margin-bottom: 20px;
+}
+
+.button {
+    padding: 10px 44px;
+    background: #FF8F27;
+    border: none;
+    width: 184px;
+    height: 36px;
+}
+
+.actors-title {
+    padding-left: 15px;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 10px;
+}
+
+.actors-list {
+    margin: 0;
+    list-style: none;
+    padding-left: 15px;
+    /* чтобы подчеркнуть текст */
+    text-decoration: underline;
+    line-height: 150%;
+}
+
+.full-info {
+    
+    flex: 0.97;
+}
+
+.visible {
+    display: block;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4%;
+}
+.tabs-item {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+/* Приём чтобы все элемегьы имели отсуп 40 пиксей, а ласт нет  */
+.tabs-item:not(:last-child) {
+    margin-right: 4%;
+}
+.tabs-item-active {
+    color: #FF8F27;
+}
+
+.full-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabs-content {
+    display: none;
+    margin-right: 70px;
+}
+
+.visible {
+    display: block;
+}
+
+.text { 
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.subscribe-title {
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 900;
+    margin-top: 0px;
+}
+
+.subscribe-form {
+    display: flex;
+    margin-bottom: 48px;
+}
+
+.subscribe-input {
+    background: rgba(196, 196, 196, 0.5);
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 18px;
+    padding-right: 18px;
+    border: none;
+    color: #AEAEAE;
+    flex: 1;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.subcribe-button {
+    background: #FF8F27;
+    border-radius: 0px 5px 5px 0px;
+    border: none;
+    padding: 12px;
+}
+
+@media (max-width: 1200px) {
+    .container{
+        max-width: 960px;
+    }
+    .tabs-item {
+        font-size: 16px;
+    }
+}
+    
+@media (max-width: 992px) {
+    .container{
+        max-width: 740px;
+    }
+    
+    .tabs {
+        flex-wrap: wrap;
+    }
+    .tabs-item {
+        flex-basis: 20%;
+        line-height: 2;
+    }
+    .full-content {
+        flex-wrap: wrap;
+
+    }
+    .tabs-content {
+        margin-bottom: 4%;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .actor-list {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 760px) {
+    .container {
+        max-width: 540px;
+    }
+    .more {
+        display: none;
+    }    
+    .tabs-item {
+    flex-basis: 33%;
+    }
+    .tabs-content {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 578px) {
+    .container {
+        width: 90%;
+    }
+    .header {
+        flex-wrap: wrap;
+    }
+    .search {
+        flex-basis: 100%;
+        order: 3;
+        margin-top: 5%;
+    }
+
+    .content {
+        flex-wrap: wrap;
+    }
+    .actors-list, .actors-title {
+        display: none;
+    }
+    .short-info {
+        margin-bottom: 5%;
+        margin-right: 0;
+    }
+    .poster {
+        margin-top: -20%;
+        display: inline-block;
+        width: 100%;
+    }
+    .button {
+        width: 100%;
+    }
+}
